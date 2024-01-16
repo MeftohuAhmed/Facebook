@@ -15,16 +15,12 @@ def create_test_graph_directed(nodes_count, edges_count):
     The function ensures that there are no self-loops and each edge is bidirectional,
     i.e., if there is an edge from node A to B, there is also an edge from B to A.
     """
-    # Initialize nodes
     vertices = [Node(i) for i in range(nodes_count)]
 
-    # Create a list of all possible edges
     all_edges = [[i, j] for i in range(nodes_count) for j in range(i + 1, nodes_count)]
 
-    # Shuffle the edges to randomize which ones are added
     shuffle(all_edges)
 
-    # Add edges to the nodes
     for i in range(min(edges_count, len(all_edges))):
         edge = all_edges[i]
         vertices[edge[0]].friends.append(vertices[edge[1]])
