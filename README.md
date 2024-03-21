@@ -9,29 +9,20 @@ In this hypothetical setting, I am tasked with a multifaceted challenge: not jus
 ## 🌍 Challenges That Define My Role
 Here's a glimpse into the challenges I envisioned developing to tackle these integration challenges:
 
-### 🔍 Challenge #1: Discovering Friends on Facebook
-A pivotal challenge to facilitate users in easily finding and connecting with their Facebook friends across different platforms, enhancing the social networking experience.
+🔍 Challenge #1: **Discovering Friend Circles on Facebook**
 
-### 🌐 Challenge #2: Seamless Friend Suggestions
-Designed to recommend Facebook friends on Instagram, this challenge employs a separate database management system for a smooth cross-platform transition.
+To enhance social networking experiences, we need to efficiently find all the people within each user’s friend circle on Facebook. This involves identifying direct and transitive friendships among users, ultimately determining the total number of friend circles across the platform.
 
-### 🔄 Challenge #3: Synchronizing Stories
-A crucial component for sharing experiences, this challenge ensures the synchronization of Facebook stories with Instagram, offering a uniform storytelling experience.
+🌐 Challenge #2: **Duplicating Friend Circles for Instagram**
 
-### 📊 Challenge #4: Rate Limiting Requests
-Aimed at operational efficiency, this challenge introduces rate limiters to prevent identical requests from being sent from different platforms within a specific timeframe.
+After identifying friend circles on Facebook, we must replicate this data onto Instagram's servers. Each Facebook user will be assigned a unique ID to differentiate them, ensuring accurate representation of connections on both platforms.
 
-### 🔄🔁 Challenge #5: Detecting Objectionable Content
-Focusing on user safety, this algorithm identifies and flags morphed versions of abusive or profane words, marking such content as inappropriate.
+🔄 Challenge #3: **Synchronizing Stories Across Platforms**
 
-### 🕒🛠️ Challenge #6: Grouping Gibberish Posts
-This challenge groups similar gibberish posts, allowing the detection of decoding patterns and thereby enhancing content comprehension and moderation.
+Enabling seamless story viewing experiences, this challenge involves accessing and displaying Facebook stories on Instagram. Stories uploaded on Facebook are assigned unique incremental IDs, which need to be efficiently retrieved and watched on Instagram, ensuring a smooth storytelling experience.
 
-### 🎞️🎶 Challenge #7: High-Performance Clusters
-To efficiently mine user post patterns, this challenge involves the optimal assignment of posts to cluster nodes, ensuring effective resource utilization.
+📊 Challenge #4: **Throttling Status Requests**
 
-### 📈🎥 Challenge #8: Finding Overlapping Topics
-A challenge that identifies the smallest sequence of overlapping topics mentioned by users and their friends, fostering more engaging and relevant social interactions.
+Implementing a throttling mechanism for the Facebook Status API requests, we aim to limit requests for a particular Status ID within a predefined time interval. Requests exceeding this limit will be dropped, enhancing operational efficiency and resource management. Requests for different Status IDs can occur concurrently but are subject to the same time constraints to prevent overload.
 
-### 🎞️🍿 Challenge #9: Recreating the Recommendation Tree
-This innovative approach reconstructs Facebook's ad recommendation tree for Instagram, utilizing serialized preorder and inorder traversals for targeted advertising.
+
